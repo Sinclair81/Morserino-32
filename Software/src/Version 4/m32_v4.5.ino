@@ -25,6 +25,8 @@
  * 
  ****************************************************************************************************************************/
 
+// ln '/Users/sinclair/Seafile/Sinclair/Dokumente/GitHub/Morserino-32/Software/src/Version 4'  '/Users/sinclair/Seafile/Sinclair/Dokumente/Arduino/Sketchs/m32_v4.5'
+
 
 #include "morsedefs.h"
 #include "wklfonts.h"         // monospaced fonts in size 12 (regular and bold) for smaller text and 15 for larger text (regular and bold), called :

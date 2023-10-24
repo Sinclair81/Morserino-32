@@ -21,7 +21,7 @@ using namespace MorseMenu;
 //////// variables and constants for the modus menu
 
 
-const uint8_t menuN = 43;     // no of menu items +1
+const uint8_t menuN = 45;     // no of menu items +1
 
 const String menuText [menuN] = {
   "",
@@ -72,9 +72,11 @@ const String menuText [menuN] = {
     "Upload File",
     "Update Firmw", //40
     "Wifi Select", //41
+
+  "Display",        // 42
+    "Brightness";   // 43
   
-  
-  "Go To Sleep" } ; // 42
+  "Go To Sleep" } ; // 44
 
 enum navi {naviLevel, naviLeft, naviRight, naviUp, naviDown };
        
@@ -115,14 +117,16 @@ const uint8_t menuNav [menuN] [5] = {                   // { level, left, right,
   {1,_trxLora,_trxIcw,_trx,0},                          // 32 wifi
   {1,_trxWifi,_trxLora,_trx,0},                         // 33 icw
   {0,_trx,_wifi,_dummy,0},                              // 34 decoder
-  {0,_decode,_goToSleep,_dummy,_wifi_mac},              // 35 WiFi
+  {0,_decode,_display,_dummy,_wifi_mac},                // 35 WiFi
   {1,_wifi_select,_wifi_config,_wifi,0},                // 36 Disp Mac
   {1,_wifi_mac,_wifi_check,_wifi,0},                    // 37 Config Wifi
   {1,_wifi_config,_wifi_upload,_wifi,0},                // 38 Check WiFi
   {1,_wifi_check,_wifi_update,_wifi,0},                 // 39 Upload File
   {1,_wifi_upload,_wifi_select,_wifi,0},                // 40 Update Firmware
   {1,_wifi_update,_wifi_mac,_wifi,0},                   // 41 Select network
-  {0,_wifi,_keyer,_dummy,0}                             // 42 goto sleep
+  {0,_wifi,_goToSleep,_dummy,0},                        // 42 display
+  {1,_display_bright,_display_bright,_dummy,0},         // 43 display brightness
+  {0,_display,_keyer,_dummy,0}                          // 44 goto sleep
 };
 
 //boolean quickStart;                                     // should we execute menu item immediately?
